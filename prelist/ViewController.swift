@@ -6,9 +6,24 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    
+    // Realmインスタンスを取得する
+       let realm = try! Realm()
+    
+  let names = [
+    "アメリカ" ,
+    "日本",
+    "イギリス",
+  ]
+    
+    // DB内のタスクが格納されるリスト。
+       // 日付の近い順でソート：昇順
+       // 以降内容をアップデートするとリスト内は自動的に更新される。
+       var countryArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +32,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     }
     // データの数（＝セルの数）を返すメソッド
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           return 0
+        return names.count
        }
 
        // 各セルの内容を返すメソッド
@@ -25,6 +40,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
            // 再利用可能な cell を得る
            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
+        cell.textLabel?.text = names[indexPath.row]
+        
            return cell
        }
 
@@ -33,6 +50,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         performSegue(withIdentifier: "cellSegue",sender: nil) // ←追加する
        }
 
+    /*
        // セルが削除が可能なことを伝えるメソッド
        func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCell.EditingStyle {
            return .delete
@@ -42,5 +60,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
        }
 
+ */
 }
 
