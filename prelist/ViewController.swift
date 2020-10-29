@@ -8,12 +8,14 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var seach: UISearchBar!
     
     // Realmインスタンスを取得する
        let realm = try! Realm()
     
+   
   let names = [
     "アメリカ" ,
     "日本",
@@ -29,6 +31,9 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        seach.delegate = self
+        
     }
     // データの数（＝セルの数）を返すメソッド
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +46,9 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         cell.textLabel?.text = names[indexPath.row]
+        
+       
+                      
         
            return cell
        }
@@ -61,5 +69,5 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
        }
 
  */
+    
 }
-
