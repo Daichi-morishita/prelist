@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		258D40E2E692560FB26E2A7E /* Pods_prelist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA05CB34EB55608E5D4851E /* Pods_prelist.framework */; };
+		E59502FD254D899500D0A110 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59502FC254D899500D0A110 /* TabBarController.swift */; };
+		E5950307254FF42900D0A110 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5950306254FF42900D0A110 /* ImageSelectViewController.swift */; };
+		E5950310254FF5D100D0A110 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595030F254FF5D100D0A110 /* HomeViewController.swift */; };
+		E5950314255040EB00D0A110 /* Image 3 in Resources */ = {isa = PBXBuildFile; fileRef = E5950313255040EB00D0A110 /* Image 3 */; };
 		E5C9FED42540130F00A941AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C9FED32540130F00A941AC /* AppDelegate.swift */; };
 		E5C9FED62540130F00A941AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C9FED52540130F00A941AC /* SceneDelegate.swift */; };
 		E5C9FED82540130F00A941AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C9FED72540130F00A941AC /* ViewController.swift */; };
@@ -21,6 +25,10 @@
 /* Begin PBXFileReference section */
 		4BCF6F0721301EE5884CD334 /* Pods-prelist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prelist.release.xcconfig"; path = "Target Support Files/Pods-prelist/Pods-prelist.release.xcconfig"; sourceTree = "<group>"; };
 		4C3E471F1058B8C42201E47B /* Pods-prelist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prelist.debug.xcconfig"; path = "Target Support Files/Pods-prelist/Pods-prelist.debug.xcconfig"; sourceTree = "<group>"; };
+		E59502FC254D899500D0A110 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E5950306254FF42900D0A110 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
+		E595030F254FF5D100D0A110 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E5950313255040EB00D0A110 /* Image 3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Image 3"; sourceTree = "<group>"; };
 		E5C9FED02540130F00A941AC /* prelist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prelist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C9FED32540130F00A941AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C9FED52540130F00A941AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,39 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E5950302254FF30F00D0A110 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E595030F254FF5D100D0A110 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E5950303254FF32A00D0A110 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				E5950306254FF42900D0A110 /* ImageSelectViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		E5950304254FF34400D0A110 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				E5C9FED72540130F00A941AC /* ViewController.swift */,
+				E5C9FEEE2540175C00A941AC /* DitailViewController.swift */,
+				E5C9FEF725407AAA00A941AC /* country.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		E5950305254FF36900D0A110 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		E5C9FEC72540130F00A941AC = {
 			isa = PBXGroup;
 			children = (
@@ -84,14 +125,17 @@
 		E5C9FED22540130F00A941AC /* prelist */ = {
 			isa = PBXGroup;
 			children = (
-				E5C9FED32540130F00A941AC /* AppDelegate.swift */,
-				E5C9FEF725407AAA00A941AC /* country.swift */,
-				E5C9FEEE2540175C00A941AC /* DitailViewController.swift */,
-				E5C9FED52540130F00A941AC /* SceneDelegate.swift */,
-				E5C9FED72540130F00A941AC /* ViewController.swift */,
+				E59502FC254D899500D0A110 /* TabBarController.swift */,
 				E5C9FED92540130F00A941AC /* Main.storyboard */,
+				E5950302254FF30F00D0A110 /* Home */,
+				E5950303254FF32A00D0A110 /* Post */,
+				E5950304254FF34400D0A110 /* Info */,
+				E5950305254FF36900D0A110 /* Account */,
 				E5C9FEDC2540131100A941AC /* Assets.xcassets */,
+				E5950313255040EB00D0A110 /* Image 3 */,
 				E5C9FEDE2540131100A941AC /* LaunchScreen.storyboard */,
+				E5C9FED52540130F00A941AC /* SceneDelegate.swift */,
+				E5C9FED32540130F00A941AC /* AppDelegate.swift */,
 				E5C9FEE12540131100A941AC /* Info.plist */,
 			);
 			path = prelist;
@@ -157,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C9FEE02540131100A941AC /* LaunchScreen.storyboard in Resources */,
+				E5950314255040EB00D0A110 /* Image 3 in Resources */,
 				E5C9FEDD2540131100A941AC /* Assets.xcassets in Resources */,
 				E5C9FEDB2540130F00A941AC /* Main.storyboard in Resources */,
 			);
@@ -214,6 +259,9 @@
 				E5C9FEF825407AAA00A941AC /* country.swift in Sources */,
 				E5C9FED82540130F00A941AC /* ViewController.swift in Sources */,
 				E5C9FED42540130F00A941AC /* AppDelegate.swift in Sources */,
+				E5950310254FF5D100D0A110 /* HomeViewController.swift in Sources */,
+				E59502FD254D899500D0A110 /* TabBarController.swift in Sources */,
+				E5950307254FF42900D0A110 /* ImageSelectViewController.swift in Sources */,
 				E5C9FED62540130F00A941AC /* SceneDelegate.swift in Sources */,
 				E5C9FEEF2540175C00A941AC /* DitailViewController.swift in Sources */,
 			);

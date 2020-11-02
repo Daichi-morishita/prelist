@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="87.723214285714278"/>
+            <point key="canvasLocation" x="2838" y="293"/>
         </scene>
         <!--Ditail View Controller-->
         <scene sceneID="1Z3-x4-esB">
@@ -86,41 +86,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIw-U9-7xV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="923"/>
+            <point key="canvasLocation" x="2838" y="1304"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="EKp-gh-sev">
             <objects>
-                <viewController id="J8T-7y-zDP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="J8T-7y-zDP" customClass="HomeViewController" customModule="prelist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sb5-03-A1q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vwX-g2-u2W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="8r4-19-5lh"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="8r4-19-5lh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yh6-1l-VLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2113" y="88"/>
+            <point key="canvasLocation" x="-397" y="-769"/>
         </scene>
-        <!--Item-->
+        <!--投稿-->
         <scene sceneID="gNb-03-Tai">
             <objects>
-                <viewController id="A4S-Ax-1Lx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageSelect" id="A4S-Ax-1Lx" customClass="ImageSelectViewController" customModule="prelist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rPW-vu-Q5Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MT-zv-ocF">
+                                <rect key="frame" x="57" y="124" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="at7-ae-yns"/>
+                                </constraints>
+                                <state key="normal" title="ライブラリ">
+                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleLibraryButton:" destination="A4S-Ax-1Lx" eventType="touchUpInside" id="NRr-J2-EPu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2R-TQ-eJ0">
+                                <rect key="frame" x="57" y="164" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="nUV-Xz-r0H"/>
+                                </constraints>
+                                <state key="normal" title="カメラ">
+                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCameraButton:" destination="A4S-Ax-1Lx" eventType="touchUpInside" id="3pD-um-unF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ey9-zY-jwq">
+                                <rect key="frame" x="57" y="204" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="6bO-3C-cOF"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル">
+                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="A4S-Ax-1Lx" eventType="touchUpInside" id="e1V-SK-mbI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="y5I-gA-OcX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ey9-zY-jwq" firstAttribute="top" secondItem="U2R-TQ-eJ0" secondAttribute="bottom" constant="10" id="5xg-Yc-Ek5"/>
+                            <constraint firstItem="U2R-TQ-eJ0" firstAttribute="top" secondItem="5MT-zv-ocF" secondAttribute="bottom" constant="10" id="ECK-ks-6MT"/>
+                            <constraint firstItem="5MT-zv-ocF" firstAttribute="centerX" secondItem="rPW-vu-Q5Y" secondAttribute="centerX" id="Kti-41-q8j"/>
+                            <constraint firstItem="U2R-TQ-eJ0" firstAttribute="centerX" secondItem="rPW-vu-Q5Y" secondAttribute="centerX" id="XwM-TG-OdI"/>
+                            <constraint firstItem="5MT-zv-ocF" firstAttribute="top" secondItem="y5I-gA-OcX" secondAttribute="top" constant="80" id="iwN-g6-bii"/>
+                            <constraint firstItem="ey9-zY-jwq" firstAttribute="centerX" secondItem="rPW-vu-Q5Y" secondAttribute="centerX" id="sGv-kg-H7p"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Lkz-zf-cOq"/>
+                    <tabBarItem key="tabBarItem" title="投稿" image="camera.png" id="Lkz-zf-cOq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMF-w5-fWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3445" y="88"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="-769.41964285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--設定-->
         <scene sceneID="ki0-9b-JDS">
             <objects>
                 <viewController id="tzc-dz-hfW" sceneMemberID="viewController">
@@ -130,10 +176,11 @@
                         <viewLayoutGuide key="safeArea" id="cyL-TF-oyL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="設定" image="setting.png" id="CWU-hT-B4f"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epD-88-yay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4591" y="88"/>
+            <point key="canvasLocation" x="4449" y="-792"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Dg-5S-yMO">
@@ -152,31 +199,39 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETT-M3-0cY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="-792"/>
+            <point key="canvasLocation" x="2838" y="-769"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qZP-El-T3o">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3Or-Qq-IzW" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3Or-Qq-IzW" customClass="TabBarController" customModule="prelist" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bcd-Ca-2OI">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="hsr-zp-WpC" kind="relationship" relationship="viewControllers" id="HMg-Rt-kiI"/>
-                        <segue destination="A4S-Ax-1Lx" kind="relationship" relationship="viewControllers" id="CQH-FL-wix"/>
                         <segue destination="J8T-7y-zDP" kind="relationship" relationship="viewControllers" id="P4f-Rt-DCU"/>
+                        <segue destination="A4S-Ax-1Lx" kind="relationship" relationship="viewControllers" id="CQH-FL-wix"/>
+                        <segue destination="hsr-zp-WpC" kind="relationship" relationship="viewControllers" id="HMg-Rt-kiI"/>
+                        <segue destination="tzc-dz-hfW" kind="relationship" relationship="viewControllers" id="PY7-EH-7YC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKy-8T-4Ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2714" y="-792"/>
+            <point key="canvasLocation" x="2839" y="-1610"/>
         </scene>
     </scenes>
     <resources>
+        <image name="camera.png" width="25" height="25"/>
+        <image name="home.png" width="25" height="25"/>
+        <image name="setting.png" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
