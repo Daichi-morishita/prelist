@@ -114,10 +114,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MT-zv-ocF">
                                 <rect key="frame" x="57" y="124" width="300" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="at7-ae-yns"/>
                                 </constraints>
                                 <state key="normal" title="ライブラリ">
+                                    <color key="titleColor" systemColor="labelColor"/>
                                     <color key="titleShadowColor" systemColor="systemOrangeColor"/>
                                 </state>
                                 <connections>
@@ -126,11 +128,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2R-TQ-eJ0">
                                 <rect key="frame" x="57" y="164" width="300" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="nUV-Xz-r0H"/>
                                 </constraints>
                                 <state key="normal" title="カメラ">
-                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <action selector="handleCameraButton:" destination="A4S-Ax-1Lx" eventType="touchUpInside" id="3pD-um-unF"/>
@@ -138,11 +141,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ey9-zY-jwq">
                                 <rect key="frame" x="57" y="204" width="300" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="6bO-3C-cOF"/>
                                 </constraints>
                                 <state key="normal" title="キャンセル">
-                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <action selector="handleCancelButton:" destination="A4S-Ax-1Lx" eventType="touchUpInside" id="e1V-SK-mbI"/>
@@ -227,6 +231,9 @@
         <image name="camera.png" width="25" height="25"/>
         <image name="home.png" width="25" height="25"/>
         <image name="setting.png" width="25" height="25"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
