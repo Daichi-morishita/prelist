@@ -33,6 +33,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         }
     }
     
+    //ログインが必要なコード
+    /*
     override func viewDidAppear(_ animated: Bool) {
            super.viewDidAppear(animated)
 
@@ -43,5 +45,5 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
                        self.present(loginViewController!, animated: true, completion: nil)
            }
        }
-
+*/
 }

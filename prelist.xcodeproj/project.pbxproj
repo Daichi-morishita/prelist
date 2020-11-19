@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		258D40E2E692560FB26E2A7E /* Pods_prelist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA05CB34EB55608E5D4851E /* Pods_prelist.framework */; };
+		E532191C2566966B0099A048 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = E532191B2566966B0099A048 /* Const.swift */; };
 		E59502FD254D899500D0A110 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59502FC254D899500D0A110 /* TabBarController.swift */; };
 		E5950307254FF42900D0A110 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5950306254FF42900D0A110 /* ImageSelectViewController.swift */; };
 		E5950310254FF5D100D0A110 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595030F254FF5D100D0A110 /* HomeViewController.swift */; };
 		E5950314255040EB00D0A110 /* Image 3 in Resources */ = {isa = PBXBuildFile; fileRef = E5950313255040EB00D0A110 /* Image 3 */; };
-		E59503352553015C00D0A110 /* GoogleService-Info (3).plist in Resources */ = {isa = PBXBuildFile; fileRef = E59503342553015C00D0A110 /* GoogleService-Info (3).plist */; };
-		E59503382553063A00D0A110 /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = E59503372553063A00D0A110 /* GoogleService-Info (2).plist */; };
+		E59503352553015C00D0A110 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59503342553015C00D0A110 /* GoogleService-Info.plist */; };
+		E595033D25543C6900D0A110 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595033C25543C6900D0A110 /* LoginViewController.swift */; };
+		E595035B2555350000D0A110 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595035A2555350000D0A110 /* SettingViewController.swift */; };
+		E595035E255E74C800D0A110 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E595035D255E74C800D0A110 /* PostViewController.swift */; };
+		E5950362255E75B700D0A110 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5950361255E75B700D0A110 /* PostData.swift */; };
+		E5950366255E763500D0A110 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5950364255E763500D0A110 /* PostTableViewCell.swift */; };
+		E5950367255E763500D0A110 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5950365255E763500D0A110 /* PostTableViewCell.xib */; };
 		E5C9FED42540130F00A941AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C9FED32540130F00A941AC /* AppDelegate.swift */; };
 		E5C9FED62540130F00A941AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C9FED52540130F00A941AC /* SceneDelegate.swift */; };
 		E5C9FED82540130F00A941AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C9FED72540130F00A941AC /* ViewController.swift */; };
@@ -27,12 +33,18 @@
 /* Begin PBXFileReference section */
 		4BCF6F0721301EE5884CD334 /* Pods-prelist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prelist.release.xcconfig"; path = "Target Support Files/Pods-prelist/Pods-prelist.release.xcconfig"; sourceTree = "<group>"; };
 		4C3E471F1058B8C42201E47B /* Pods-prelist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prelist.debug.xcconfig"; path = "Target Support Files/Pods-prelist/Pods-prelist.debug.xcconfig"; sourceTree = "<group>"; };
+		E532191B2566966B0099A048 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		E59502FC254D899500D0A110 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E5950306254FF42900D0A110 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		E595030F254FF5D100D0A110 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E5950313255040EB00D0A110 /* Image 3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Image 3"; sourceTree = "<group>"; };
-		E59503342553015C00D0A110 /* GoogleService-Info (3).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (3).plist"; sourceTree = "<group>"; };
-		E59503372553063A00D0A110 /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
+		E59503342553015C00D0A110 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E595033C25543C6900D0A110 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E595035A2555350000D0A110 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		E595035D255E74C800D0A110 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		E5950361255E75B700D0A110 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		E5950364255E763500D0A110 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		E5950365255E763500D0A110 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		E5C9FED02540130F00A941AC /* prelist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prelist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C9FED32540130F00A941AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C9FED52540130F00A941AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +91,11 @@
 			isa = PBXGroup;
 			children = (
 				E595030F254FF5D100D0A110 /* HomeViewController.swift */,
+				E532191B2566966B0099A048 /* Const.swift */,
+				E5950364255E763500D0A110 /* PostTableViewCell.swift */,
+				E5950365255E763500D0A110 /* PostTableViewCell.xib */,
+				E5950361255E75B700D0A110 /* PostData.swift */,
+				E595035D255E74C800D0A110 /* PostViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -130,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				E59502FC254D899500D0A110 /* TabBarController.swift */,
+				E595035A2555350000D0A110 /* SettingViewController.swift */,
+				E595033C25543C6900D0A110 /* LoginViewController.swift */,
 				E5C9FED92540130F00A941AC /* Main.storyboard */,
 				E5950302254FF30F00D0A110 /* Home */,
 				E5950303254FF32A00D0A110 /* Post */,
@@ -141,8 +160,7 @@
 				E5C9FED52540130F00A941AC /* SceneDelegate.swift */,
 				E5C9FED32540130F00A941AC /* AppDelegate.swift */,
 				E5C9FEE12540131100A941AC /* Info.plist */,
-				E59503372553063A00D0A110 /* GoogleService-Info (2).plist */,
-				E59503342553015C00D0A110 /* GoogleService-Info (3).plist */,
+				E59503342553015C00D0A110 /* GoogleService-Info.plist */,
 			);
 			path = prelist;
 			sourceTree = "<group>";
@@ -209,9 +227,9 @@
 				E5C9FEE02540131100A941AC /* LaunchScreen.storyboard in Resources */,
 				E5950314255040EB00D0A110 /* Image 3 in Resources */,
 				E5C9FEDD2540131100A941AC /* Assets.xcassets in Resources */,
+				E5950367255E763500D0A110 /* PostTableViewCell.xib in Resources */,
 				E5C9FEDB2540130F00A941AC /* Main.storyboard in Resources */,
-				E59503382553063A00D0A110 /* GoogleService-Info (2).plist in Resources */,
-				E59503352553015C00D0A110 /* GoogleService-Info (3).plist in Resources */,
+				E59503352553015C00D0A110 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,14 +282,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E595033D25543C6900D0A110 /* LoginViewController.swift in Sources */,
+				E5950362255E75B700D0A110 /* PostData.swift in Sources */,
+				E5950366255E763500D0A110 /* PostTableViewCell.swift in Sources */,
 				E5C9FEF825407AAA00A941AC /* country.swift in Sources */,
 				E5C9FED82540130F00A941AC /* ViewController.swift in Sources */,
 				E5C9FED42540130F00A941AC /* AppDelegate.swift in Sources */,
 				E5950310254FF5D100D0A110 /* HomeViewController.swift in Sources */,
+				E595035B2555350000D0A110 /* SettingViewController.swift in Sources */,
 				E59502FD254D899500D0A110 /* TabBarController.swift in Sources */,
 				E5950307254FF42900D0A110 /* ImageSelectViewController.swift in Sources */,
 				E5C9FED62540130F00A941AC /* SceneDelegate.swift in Sources */,
 				E5C9FEEF2540175C00A941AC /* DitailViewController.swift in Sources */,
+				E595035E255E74C800D0A110 /* PostViewController.swift in Sources */,
+				E532191C2566966B0099A048 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
