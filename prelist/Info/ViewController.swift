@@ -16,11 +16,15 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
        let realm = try! Realm()
     
    
-  let names = [
+    var names = [
     "アメリカ" ,
     "日本",
     "イギリス",
   ]
+    //searchbar試し
+    //検索結果配列
+    var searchResult = [String]()
+    //ここまで
     
     // DB内のタスクが格納されるリスト。
        // 日付の近い順でソート：昇順
@@ -32,8 +36,17 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         tableView.delegate = self
         tableView.dataSource = self
         
-        seach.delegate = self
+        //searchbar試し
+        //searchBar関連のコード
         
+        seach.delegate = self
+         
+        //何も入力されていなくてもreturnキーを押せる
+        seach.enablesReturnKeyAutomatically = false
+        
+        //検索結果配列にデータをコピーする
+        searchResult = names
+            //ここまで
     }
     // データの数（＝セルの数）を返すメソッド
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,17 +58,21 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
            // 再利用可能な cell を得る
            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
+        //searchbar 試し
         cell.textLabel?.text = names[indexPath.row]
-        
-       
-                      
+     //ここまで
         
            return cell
+       }
+    //データの個数を返すメソッド
+       func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int {
+           return searchResult.count
        }
 
        // 各セルを選択した時に実行されるメソッド
        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "cellSegue",sender: nil) // ←追加する
+        
        }
 
     /*
@@ -70,4 +87,18 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
 
  */
     
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+       }
+       //  検索バーに入力があったら呼ばれる
+       func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+           guard !searchText.isEmpty else {
+               searchResult = names
+               tableView.reloadData()
+               return
+           }
+           searchResult = names.filter({ item -> Bool in
+               item.lowercased().contains(searchText.lowercased())
+           })
+           tableView.reloadData()
+       }
 }
